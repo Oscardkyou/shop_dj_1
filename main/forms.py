@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 from django.forms import ModelForm, TextInput, Textarea, Select, FileInput, EmailInput, PasswordInput
 from .models import Category, Product, Comment
 from django.contrib.auth.models import User
 
+=======
+from django.forms import ModelForm, TextInput, Textarea, Select, FileInput,\
+    EmailInput, PasswordInput
+from .models import Category, Product
+from django.contrib.auth.models import User
+
+
+>>>>>>> d3bd320 (ShopTestDj)
 class UserForm(ModelForm):
     class Meta:
         model = User
@@ -33,6 +42,7 @@ class UserForm(ModelForm):
         }
 
 class CategoryForm(ModelForm):
+<<<<<<< HEAD
       class Meta:
             model = Category
             fields = ['title']
@@ -43,6 +53,19 @@ class CategoryForm(ModelForm):
                         "placeholder": "Категория"
             })
             }
+=======
+    class Meta:
+        model = Category
+        fields = ['title']
+        widgets = {
+            "title": TextInput(attrs={
+                "style": "margin: 20px; width: 1190px;",
+                "class": "form-control",
+                "placeholder": "Категория",
+            })
+        }
+
+>>>>>>> d3bd320 (ShopTestDj)
 
 class ProductForm(ModelForm):
     class Meta:
@@ -76,9 +99,13 @@ class ProductForm(ModelForm):
                 "style": "margin: 20px; width: 1190px;",
                 'class': 'form-control form-control-dark'
             }),
+<<<<<<< HEAD
         }
 
 class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ['author', 'content']
+=======
+        }
+>>>>>>> d3bd320 (ShopTestDj)
